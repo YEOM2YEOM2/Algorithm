@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+# N <= 10
 def dfs(s, c, csum):    # s : 출발지, c : 현재 위치, csum : 현재 비용
     global _min
 
@@ -13,9 +14,9 @@ def dfs(s, c, csum):    # s : 출발지, c : 현재 위치, csum : 현재 비용
         return
 
     for i in range(N):
-        if arr[s][i] != 0 and not visited[i]:
+        if arr[c][i] != 0 and not visited[i]:
             visited[i] = 1
-            dfs(s, i, csum + arr[s][i])
+            dfs(s, i, csum + arr[c][i])
             visited[i] = 0
 
 N = int(input())
