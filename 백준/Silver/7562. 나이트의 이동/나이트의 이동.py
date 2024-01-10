@@ -4,21 +4,21 @@ input = sys.stdin.readline
 
 def bfs(si, sj):
     q = deque()
-    visited = [[0] * N for _ in range(N)]
+    visited = [[-1] * N for _ in range(N)]
     q.append((si, sj))
-    visited[si][sj] = 1
+    visited[si][sj] = 0
 
     while q:
         ci, cj = q.popleft()
 
         if ci == ei and cj == ej:
-            print(visited[ei][ej] - 1)
+            print(visited[ei][ej])
             break
 
         for di, dj in ((-1, -2), (-2, -1), (-2, 1), (-1, 2), (1, 2), (2, 1), (2, -1), (1, -2)):
             ni = ci + di
             nj = cj + dj
-            if 0 <= ni < N and 0 <= nj < N and not visited[ni][nj]:
+            if 0 <= ni < N and 0 <= nj < N and visited[ni][nj] == -1:
                 visited[ni][nj] = visited[ci][cj] + 1
                 q.append((ni, nj))
 
