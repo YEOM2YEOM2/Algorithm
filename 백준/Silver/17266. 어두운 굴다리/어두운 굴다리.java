@@ -40,7 +40,6 @@ public class Main {
             }
 
             if (n - prev > 0) flag = false;
-            else flag = true;
 
             if (flag) {
                 ans = midHeight;
