@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.StringTokenizer;
 import java.util.Queue;
 
-public class BJ4863 {
+public class BJ4963 {
     static int arr[][];
     static boolean visited[][];
     static int di[] = {-1, -1, -1, 0, 1, 1, 1, 0};
