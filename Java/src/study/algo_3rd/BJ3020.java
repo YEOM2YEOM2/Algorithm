@@ -5,8 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-// 시간 초과
-public class BJ3020_X {
+public class BJ3020 {
     static int N, H;
     static int[] arr;
 
@@ -26,9 +25,9 @@ public class BJ3020_X {
             }
         }
 
-        int ans = Integer.MAX_VALUE;
-        int cnt = 0;
-        for (int i = 0; i < H; i++) {
+        int ans = arr[1];
+        int cnt = 1;
+        for (int i = 1; i < H; i++) {
             if (arr[i] < ans) {
                 ans = arr[i];
                 cnt = 1;
@@ -36,7 +35,6 @@ public class BJ3020_X {
                 cnt++;
             }
         }
-        System.out.print(ans + " ");
-        System.out.println(cnt);
+        System.out.print(ans + " " + cnt);
     }
 }
