@@ -1,4 +1,4 @@
-package study.algo_4th;
+package study.feb.algo_4th;
 
 import java.io.*;
 import java.util.*;

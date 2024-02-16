@@ -1,4 +1,4 @@
-package study.algo_3rd;
+package study.feb.algo_3rd;
 
 import java.io.BufferedReader;
 import java.io.IOException;
