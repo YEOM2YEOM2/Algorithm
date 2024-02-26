@@ -1,4 +1,4 @@
-package study.feb.algo_5th;
+package study.feb.algo_5th_tree;
 
 //https://loosie.tistory.com/447
 

@@ -1,3 +1,5 @@
+package study.jan.algo_1st_dfs_bfs;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package study.feb.algo_5th;
+package study.feb.algo_5th_tree;
 
 import java.io.*;
 import java.util.*;

@@ -1,4 +1,4 @@
-package study.feb.algo_2nd;
+package study.feb.algo_2nd_dp;
 
 import java.io.BufferedReader;
 import java.io.IOException;

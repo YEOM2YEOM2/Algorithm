@@ -1,4 +1,4 @@
-package study.feb.algo_3rd;
+package study.feb.algo_3rd_binary_search;
 
 import java.io.*;
 import java.util.StringTokenizer;
