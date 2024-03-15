@@ -1,3 +1,5 @@
+package simulation;
+
 import java.io.*;
 
 public class BJ2851 {

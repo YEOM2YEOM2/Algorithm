@@ -1,3 +1,5 @@
+package tree.binary_search;
+
 import java.io.*;
 
 public class BJ5639 {

@@ -1,3 +1,5 @@
+package math;
+
 import java.util.Scanner;
 
 public class BJ11720 {
