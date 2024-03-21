@@ -17,9 +17,8 @@ public class Main {
         for (int i = N - 1; i > 0; i--) { // nums 양수
             if (!visited[i]) {
                 if (nums[i] > 1) {
-                    if (nums[i - 1] > 0) {
-                        if (nums[i - 1] == 1) ans += nums[i] + 1;
-                        else ans += nums[i] * nums[i - 1];
+                    if (nums[i - 1] > 1) {
+                        ans += nums[i] * nums[i - 1];
                         visited[i - 1] = true;
                     } else {
                         ans += nums[i];
