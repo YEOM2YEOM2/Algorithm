@@ -15,7 +15,7 @@ public class BJ2109 {
         }
 
         @Override
-        public int compareTo(Lecture l) { // 날짜 내림차순, 가격 내림차순
+        public int compareTo(Lecture l) {
             return l.p - this.p;
         }
     }

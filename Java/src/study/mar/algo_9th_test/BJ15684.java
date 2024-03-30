@@ -32,7 +32,6 @@ public class BJ15684 {
             }
         }
         System.out.println(-1);
-
     }
 
     // 사다리 놓기
