@@ -1,3 +1,5 @@
+package recursion;
+
 import java.io.*;
 import java.util.*;
 
@@ -28,10 +30,28 @@ public class BJ2630 {
     }
 
     private static void solution(int si, int sj, int n) {
-        for (int i = si; i < si + 1; i++) {
-            for (int j = sj; j < sj + n - 1; j++) {
-                if (arr[i][j] != arr[i][j + 1]) {
+        boolean flag = true;
+        boolean temp = arr[si][sj]; // 각 색종이의 시작 지점 색깔
+        for (int i = si; i < si + n; i++) { // 가로 한 줄만 볼 경우, 바로 아랫줄이 색깔이 달라서 잘라야하는 경우 보지 못함.
+            for (int j = sj; j < sj + n; j++) {
+                if (arr[i][j] != temp && !visited[i][j]) {
+                    flag = false;
+                    solution(si, sj, n / 2);
+                    solution(si, sj + n / 2, n / 2);
+                    solution(si + n / 2, sj, n / 2);
+                    solution(si + n / 2, sj + n / 2, n / 2);
                 }
+            }
+        }
+
+
+
+        if (flag) {
+            if (arr[si][sj]) blueCnt++;
+            else whiteCnt++;
+
+            for (int i = si; i < si + n; i++) {
+                for (int j = sj; j < sj + n; j++) visited[i][j] = true;
             }
         }
     }
