@@ -1,7 +1,6 @@
 package study.apr.algo_11th_test;
 
 import java.io.*;
-import java.util.*;
 
 public class BJ4659 {
 
