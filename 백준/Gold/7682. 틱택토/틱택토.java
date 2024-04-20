@@ -29,6 +29,7 @@ public class Main {
             tictactok();
             isPossible(Ocnt, Xcnt);
         }
+        sb.delete(sb.length() - 1, sb.length());
         System.out.println(sb);
     }
     private static void tictactok() {
@@ -68,26 +69,17 @@ public class Main {
         }
     }
     private static void isPossible(int Ocnt, int Xcnt) {
-        boolean flag = false; // sb 입력되었는지 아닌지 판단
-        // 칸이 다 채워짐 & X : 5개, O : 4개
-        if (Ocnt + Xcnt == 9 && Xcnt == Ocnt + 1) {
-            flag = true;
-            if (Oflag && Xflag) sb.append("invalid" + "\n"); // 둘 다 이길 때
-            else if (Oflag && !Xflag) sb.append("invalid" + "\n"); // O가 이길 때
-            else sb.append("valid" + "\n"); // 승부 x, X승
-        } // 말이 아직 남아있을 때
-        else {
-            if (Xcnt == Ocnt + 1) { // X의 개수가 O의 개수보다 하나 많을 경우
-                flag = true;
-                if (Xflag && !Oflag) sb.append("valid" + "\n"); // X만 이겼을 때 valid
-                else sb.append("invalid" + "\n");
-            } else if (Xcnt == Ocnt) { // X의 개수 == O의 개수
-                flag = true;
-                if (Oflag && !Xflag) sb.append("valid" + "\n"); // O만 이겼을 때
-                else sb.append("invalid" + "\n");
-            }
+        if (!Oflag && !Xflag) { // 승부 x
+            if (Ocnt + 1 == Xcnt && Xcnt + Ocnt == 9) sb.append("valid" + "\n");
+            else sb.append("invalid" + "\n");
+        } else if (Oflag && Xflag) { // 둘 다 승 ex) XXXOOOX..
+            sb.append("invalid" + "\n");
+        } else if (Oflag) { // 'O' 승
+            if (Ocnt == Xcnt) sb.append("valid" + "\n");
+            else sb.append("invalid" + "\n");
+        } else if (Xflag) { // 'X' 승
+            if (Ocnt + 1 == Xcnt) sb.append("valid" + "\n");
+            else sb.append("invalid" + "\n");
         }
-        // 다 채워졌는데 개수 안 맞는 경우, 덜 채웠는데 개수 안 맞는 경우
-        if (!flag) sb.append("invalid" + "\n");
     }
 }
