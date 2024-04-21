@@ -22,7 +22,7 @@ public class BJ5904 {
         solution(length, k);
     }
 
-    // S[k-1] + "m..o" + S[k-1], 세 구역으로 나눠서 탐색
+    //  S[k-1]+ "m..o" + S[k-1], 세 구역으로 나눠서 탐색
     public static void solution(int length, int k) {
         // 초기, S[0] = "moo"
         if (k == 0) {
