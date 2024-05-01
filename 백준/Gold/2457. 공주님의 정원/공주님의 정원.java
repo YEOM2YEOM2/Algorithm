@@ -56,6 +56,6 @@ public class Main {
                 break;
             }
         }
-        System.out.println(max < e ? 0 : cnt);
+        System.out.println(s < e ? 0 : cnt);
     }
 }
