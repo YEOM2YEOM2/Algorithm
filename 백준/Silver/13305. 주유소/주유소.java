@@ -24,7 +24,7 @@ public class Main {
         }
 
         int idx = 0; // 현재 도시 위치
-        int ans = 0;
+        long ans = 0;
         while (idx < N - 1) {
             int tempIdx = idx;
             for (int i = idx + 1; i < N - 1; i++) {
@@ -33,7 +33,7 @@ public class Main {
             }
 
             for (int i = idx; i <= tempIdx; i++) {
-                ans += cities[idx].p * cities[i].d;
+                ans += (long) cities[idx].p * cities[i].d;
             }
 
             idx = tempIdx + 1;
