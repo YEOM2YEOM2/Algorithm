@@ -1,4 +1,4 @@
-package tree.binary_search;
+package structure.tree.binary_search;
 
 import java.io.*;
 
