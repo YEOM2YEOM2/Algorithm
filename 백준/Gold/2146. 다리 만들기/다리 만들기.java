@@ -31,7 +31,7 @@ public class Main {
             }
         }
         // 최단 거리 다리 찾기
-        for (int i = 1; i <= idx; i++) {
+        for (int i = 1; i < idx; i++) {
             // i에 해당하는 섬에서 다른 섬까지의 최단 거리
             solution(i);
         }
