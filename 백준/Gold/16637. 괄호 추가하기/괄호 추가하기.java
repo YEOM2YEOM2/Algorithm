@@ -1,5 +1,4 @@
 import java.io.*;
-import java.util.*;
 
 public class Main {
     static int N;
@@ -15,7 +14,7 @@ public class Main {
     }
 
     private static void dfs(int sum, int idx) {
-        if (idx >= N) {
+        if (idx == N) {
             ans = Math.max(ans, sum);
             return;
         }
