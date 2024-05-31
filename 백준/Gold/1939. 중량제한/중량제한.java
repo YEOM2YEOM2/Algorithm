@@ -1,7 +1,6 @@
 import java.io.*;
 import java.util.*;
 
-// 이분 탐색 + DFS
 public class Main {
     static int N, M;
     static boolean isPossible;
@@ -57,6 +56,8 @@ public class Main {
     }
 
     private static void dfs(int s, int e, int limit) {
+        if (isPossible) return;
+        
         if (s == e) {
             isPossible = true;
             return;
