@@ -97,28 +97,15 @@ public class Main {
             arr[tree.i][tree.j] += tree.age / 2;
         }
         // 가을, 나이 5의 배수인 나무 인접 8칸 나이 1인 나무 생성
-        if (idx % 2 == 0) {
-            while (!breeding.isEmpty()) {
-                Tree tree = breeding.poll();
+        while (!breeding.isEmpty()) {
+            Tree tree = breeding.poll();
 
-                for (int k = 0; k < 8; k++) {
-                    int ni = tree.i + di[k];
-                    int nj = tree.j + dj[k];
-                    if (1 <= ni && ni <= N && 1 <= nj && nj <= N) {
-                        tree2.offer(new Tree(ni, nj, 1));
-                    }
-                }
-            }
-        } else {
-            while (!breeding.isEmpty()) {
-                Tree tree = breeding.poll();
-
-                for (int k = 0; k < 8; k++) {
-                    int ni = tree.i + di[k];
-                    int nj = tree.j + dj[k];
-                    if (1 <= ni && ni <= N && 1 <= nj && nj <= N) {
-                        tree1.offer(new Tree(ni, nj, 1));
-                    }
+            for (int k = 0; k < 8; k++) {
+                int ni = tree.i + di[k];
+                int nj = tree.j + dj[k];
+                if (1 <= ni && ni <= N && 1 <= nj && nj <= N) {
+                    if (idx % 2 == 0) tree2.offer(new Tree(ni, nj, 1));
+                    else tree1.offer(new Tree(ni, nj, 1));
                 }
             }
         }
