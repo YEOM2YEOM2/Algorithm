@@ -27,7 +27,7 @@ public class Main {
                 ans = diff;
                 break;
             } else {
-                if (left + 1 == right && right != N - 1) right++;
+                if (left + 1 == right && right != N) right++;
                 ans = Math.min(ans, diff);
                 left++;
             }
