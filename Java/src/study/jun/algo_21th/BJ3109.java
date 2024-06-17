@@ -44,7 +44,7 @@ public class BJ3109 {
     }
 
     private static void dfs(int ci, int cj) {
-        if (cj == C -1) {
+        if (cj == C - 1) {
             isFind = true;
             ans++;
             return;
